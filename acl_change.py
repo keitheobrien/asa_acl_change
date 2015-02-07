@@ -62,13 +62,6 @@ pprint(result_json[u'items:'][u"objectId:"])
 
 
 
-
-#print r.json()
-
-#Print HTTP Headers sent
-#print r.request.headers
-#print r.status_code
-
 # The number at the end can change and should be retrieved first
 api_path_object = "https://%s/api/access/in/Filtered/rules/1417028242" % ip_address
 url = firewall + api_path
