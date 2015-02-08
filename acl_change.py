@@ -28,6 +28,8 @@ parser = OptionParser()
 parser.add_option('-f', '--file', help="CSV Data File")
 opts, args = parser.parse_args()
 
+#if not opts.file: parser.error('File name is required')
+
 
 if len(sys.argv) > 1:
     username = sys.argv[1]
