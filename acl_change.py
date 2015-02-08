@@ -18,10 +18,16 @@ try:
     import logging
     from requests.auth import HTTPBasicAuth
     from pprint import pprint
+    from optparse import OptionParser
     
 except ImportError, error:
     sys.stdout.write('ImportError: %s \n' % error)
     sys.exit(1)
+
+parser = OptionParser()
+parser.add_option('-f', '--file', help="CSV Data File")
+opts, args = parser.parse_args()
+
 
 if len(sys.argv) > 1:
     username = sys.argv[1]
