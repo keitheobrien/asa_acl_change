@@ -47,6 +47,8 @@ if len(sys.argv) == 1:
     print "Usage: acl_enable [username] [password] [fw ip address] [allow or deny]"
     sys.exit(1)
 
+# JSON data that has to be sent to the ASA to enable and disable the ACL.
+
 api_data_false = """{
     "sourceAddress": {
         "kind": "objectRef#NetworkObj",
