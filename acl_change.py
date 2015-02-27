@@ -1,11 +1,15 @@
 #!/usr/bin/env python
 
 
-# Cisco ASA API Script
-#
-# Author: Keith O'Brien
-# kobrien@cisco.com
-#############################
+# *------------------------------------------------------------------
+# * Cisco ASA API Script
+# * Author: Keith O'Brien
+# * kobrien@cisco.com
+# *
+# * You must have an ASA setup with the REST API
+# *
+# *------------------------------------------------------------------
+# *
 
 
 try:
