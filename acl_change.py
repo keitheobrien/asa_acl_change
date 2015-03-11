@@ -18,6 +18,7 @@ try:
     from requests.auth import HTTPBasicAuth
     from pprint import pprint
     from optparse import OptionParser
+    from getpass import getpass
     
 except ImportError, error:
     sys.stdout.write('ImportError: %s \n' % error)
@@ -34,17 +35,16 @@ if len(sys.argv) > 1:
     username = sys.argv[1]
 
 if len(sys.argv) > 2:
-    password = sys.argv[2]
-
-if len(sys.argv) > 3:
     ip_address = sys.argv[3]
 
-if len(sys.argv) > 4:
+if len(sys.argv) > 3:
     acl_enable = sys.argv[4]
 
 if len(sys.argv) == 1:
-    print "Usage: acl_enable [username] [password] [fw ip address] [allow or deny]"
+    print "Usage: acl_enable [username] [fw ip address] [allow or deny]"
     sys.exit(1)
+
+password = getpass('Enter API Password for ASA:')
 
 # JSON data that has to be sent to the ASA to enable and disable the ACL.
 
