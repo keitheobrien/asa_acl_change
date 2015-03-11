@@ -35,10 +35,10 @@ if len(sys.argv) > 1:
     username = sys.argv[1]
 
 if len(sys.argv) > 2:
-    ip_address = sys.argv[3]
+    ip_address = sys.argv[2]
 
 if len(sys.argv) > 3:
-    acl_enable = sys.argv[4]
+    acl_enable = sys.argv[3]
 
 if len(sys.argv) == 1:
     print "Usage: acl_enable [username] [fw ip address] [allow or deny]"
